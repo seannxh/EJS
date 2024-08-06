@@ -10,13 +10,15 @@
   <%- include('./partials/nav') %>
   <ul>
     <% restaurant.menu.forEach(item => { %>
-        <li>
-            <strong><%= item.name %></strong>: $<%= item.price %><br>
-            <em>Rating: <%= item.rating %>/5</em><br>
-            <p><%= item.details %></p>
-        </li>
+      <li>
+        <strong>
+          <%= item.name %>
+          <% if (item.rating === 5) { %>⭐<% } %>
+        </strong> - $<%= item.price %><br>
+        <em>Rating: <%= item.rating %>/5</em><br>
+        <p><%= item.details %></p>
+      </li>
     <% }) %>
-</ul>
-
+  </ul>
 </body>
 </html>

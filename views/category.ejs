@@ -11,7 +11,7 @@
   <ul>
     <% menuItems.forEach(item => { %>
         <li>
-            <strong><%= item.name %></strong>: $<%= item.price %><br>
+            <strong><%= item.name %></strong><% if (item.rating === 5) { %>⭐<% } %>: $<%= item.price %><br>
             <em>Rating: <%= item.rating %>/5</em><br>
             <p><%= item.details %></p>
         </li>
